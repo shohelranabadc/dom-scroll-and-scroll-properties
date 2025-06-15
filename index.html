@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll event practice (offsetTop, offsetLeft, clientHeight)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 style="text-align: center;"> DOM Based (offsetTop, offsetLeft, offsetWidth, offsetHeight, clientTop, clientLeft, clientHeight, clientWidth, scrollTop, scrollLeft, scrollHeight, scrollWidth) </h2>
+    <!-- offsetTop and offsetLeft -->
+     <div id="box1" style="border: 1px solid red">
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi omnis, nesciunt obcaecati deserunt ullam porro. Est soluta eius facere? Quia laboriosam delectus distinctio culpa fugiat? Sapiente doloribus, et repudiandae aliquam deleniti nihil ipsa consequatur quod similique dolor impedit facere dolores! Mollitia, eveniet earum adipisci non soluta ullam nam quia at? Hic quod tempore ipsum eligendi aut non et itaque omnis possimus quos utd animi aliquid. Veniam quam reiciendis modi iusto officia, at exercitationem reprehenderit dolore molliutem ad fugiat porro voluptate magni veniam at libero facere explicabo sit cupiditate adipisci exercitationem maiores architecto assumenda, temporibus sint sed rerum excepturi inventore odit repellat corporis. Architecto sunt, molestias ipsa doloribus quo expedita aperiam id accusamus cumque vitae commodi dolore quas voluptate delectus itaque? Necessitatibus impedit quidem consequuntur acdem laboriosam nisi commodi fugit eveniet. Cumque, reiciendis ducimus beatae sint doloremque autem provident enim volupta fugit cum repellendus aspernatur culpa laudantium sequi libero nesciunt officia! Aperiam accusantium, ab quasi iure dolor consequatur inventore consectetur quia tempora ut hic voluptatum eligendi unde mollitia doloribus. Dignissimos id voluptates ipsa harum. Perferendis nulla, eius, soluta nobis dolor officia, voluptate repellat iure ipsam delectus animi voluptatem. Aperiam quis quae, ducimus asperiores, itaque velit id hic officiis aspernatur reiciendis blanditiis. Ducimus neque animi velit saepe corporis aliquid, ipsam ut ad qui laboriosam eligendi ullam aspernatur. Porro, doloremque explicabo vero quaerat dignissimos et aliquid accusantium numquam aperiam iehenderit cumque. Nesciunt, vero minus! At, repellendus.</p>
+        <h1 id="h1">this is header</h1>
+        
+    </div>
+
+     <script>
+        const box1 = document.getElementById('box1');
+        const p1 = document.getElementById('p1');
+        const h1 = document.getElementById('h1');
+
+        // box1 or whole div 
+        document.write("-------  Parent Div  ------ <br>")
+        document.write("From Top : " + box1.offsetTop + 'px, <br>');
+        document.write("From Left : " + box1.offsetLeft + 'px, <br>');
+        document.write("Element Width : " + box1.offsetWidth + 'px, <br>');
+        document.write("Element Height : " + box1.offsetHeight + 'px, <br>');
+        document.write("Box Top Border: " + box1.clientTop + 'px, <br>');
+        document.write("Box Left Border: " + box1.clientLeft + 'px, <br>');
+        document.write("Box inner width: " + box1.clientWidth + 'px, <br>');
+        document.write("Box inner Height: " + box1.clientHeight + 'px, <br>');
+        document.write("Box Top scroll : " + box1.scrollTop + 'px, <br>');
+        document.write("Box Left scroll : " + box1.scrollLeft + 'px, <br>');
+        document.write("Box inner width scroll : " + box1.scrollWidth + 'px, <br>');
+        document.write("Box inner height scroll : " + box1.scrollHeight + 'px, <br>');
+        document.write('<br>');
+        
+
+        // paragraph
+        document.write("-------  Child paragraph  ------ <br>")
+        document.write("From Top : " + p1.offsetTop + 'px, <br>');
+        document.write("From Left : " + p1.offsetLeft + 'px, <br>');
+        document.write("Border Top : " + p1.clientTop + 'px, <br>');
+        document.write("Border Left : " + p1.clientLeft + 'px, <br>');
+        document.write("P Top scroll : " + p1.scrollTop + 'px, <br>');
+        document.write("P Left scroll : " + p1.scrollLeft + 'px, <br>');
+        document.write("P inner width scroll : " + p1.scrollWidth + 'px, <br>');
+        document.write("P inner height scroll : " + p1.scrollHeight + 'px, <br>');
+        document.write('<br>');
+
+        // header tag
+        document.write("-------  Child H1  ------ <br>")
+        document.write("From Top : " + h1.offsetTop + 'px, <br>');
+        document.write("From Left : " + h1.offsetLeft + 'px, <br>');
+        document.write("Border Top : " + h1.clientTop + 'px, <br>');
+        document.write("Border Left : " + h1.clientLeft + 'px, <br>');
+        document.write("Header Total Height: " + h1.clientHeight + 'px <br><br>');
+
+        // total Height calculate 
+        document.write( "Total Height is : " + (p1.clientHeight + h1.clientHeight) + ' pexels')
+
+
+        
+
+     </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
